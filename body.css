@@ -1,0 +1,802 @@
+/* =========================================================
+   02 / THE VILLA
+========================================================= */
+
+.intro-editorial-scene {
+  z-index: 30;
+  min-height: 180vh;
+  padding: 10vh 7vw 14vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #24180d, #120d08 55%, #080706);
+}
+
+.intro-editorial-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: url("public/binnenhuis.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  filter: brightness(0.78) contrast(1.04) saturate(1.08);
+}
+
+.intro-editorial-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(to bottom, rgba(40, 18, 4, 0.08), rgba(45, 22, 8, 0.24) 46%, rgba(0, 0, 0, 0.38)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.34), rgba(255, 190, 100, 0.08) 42%, rgba(0, 0, 0, 0.24));
+}
+
+.intro-editorial-frame {
+  position: relative;
+  z-index: 3;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-template-areas:
+    "copy rich"
+    "copy poor"
+    "note poor";
+  gap: 24px;
+  opacity: calc(0.72 + var(--interiorText) * 0.28);
+  transform: translateY(calc((1 - var(--interiorText)) * 45px));
+}
+
+.intro-editorial-copy,
+.intro-editorial-rich,
+.intro-editorial-poor,
+.intro-editorial-note {
+  background: rgba(42, 27, 14, 0.42);
+  border: 1px solid rgba(255, 225, 180, 0.18);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(14px);
+}
+
+.intro-editorial-copy {
+  grid-area: copy;
+  padding: 42px;
+  min-height: 760px;
+}
+
+.intro-editorial-rich,
+.intro-editorial-poor {
+  padding: 18px 18px 24px;
+}
+
+.intro-editorial-rich {
+  grid-area: rich;
+}
+
+.intro-editorial-poor {
+  grid-area: poor;
+}
+
+.intro-editorial-note {
+  grid-area: note;
+  padding: 24px 28px;
+}
+
+.intro-card-label,
+.intro-editorial-note span {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 252, 245, 0.72);
+}
+
+.intro-editorial-rich img,
+.intro-editorial-poor img {
+  width: 100%;
+  height: 320px;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(255, 252, 245, 0.12);
+  margin-bottom: 16px;
+}
+
+/* =========================================================
+   03 / VIEWS GRID
+========================================================= */
+
+.contrast-grid-scene {
+  z-index: 34;
+  padding: 10vh 7vw 14vh;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 205, 130, 0.16), transparent 30%),
+    radial-gradient(circle at 82% 20%, rgba(115, 150, 115, 0.14), transparent 32%),
+    linear-gradient(to bottom, #171108, #12110d 48%, #080806);
+}
+
+.contrast-grid-intro {
+  max-width: 980px;
+  margin: 0 auto 52px;
+}
+
+.contrast-grid-intro h2 {
+  margin-bottom: 24px;
+}
+
+.contrast-grid-intro p {
+  max-width: 860px;
+}
+
+.contrast-grid {
+  max-width: 1520px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.contrast-card {
+  overflow: hidden;
+  background: rgba(255, 245, 220, 0.055);
+  border: 1px solid var(--line);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+}
+
+.contrast-card img {
+  width: 100%;
+  height: 430px;
+  display: block;
+  object-fit: cover;
+}
+
+.park-card img {
+  filter: brightness(1.08) contrast(1.03) saturate(1.1);
+}
+
+.kim-card img {
+  filter: brightness(0.9) contrast(1.06) saturate(0.96);
+}
+
+.contrast-card-body {
+  padding: 30px;
+}
+
+.contrast-card-label {
+  margin: 0 0 18px;
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(255, 244, 232, 0.56);
+}
+
+.contrast-card h3 {
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   04 NEW COMBINED DESCENT SECTION
+========================================================= */
+
+.descent-scene {
+  position: relative;
+  min-height: 520vh;
+  padding: 0;
+  margin-top: -2px;
+  background: #080504;
+  z-index: 10000;
+}
+
+.descent-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.descent-stairs-image {
+  width: 100%;
+  height: 135%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transform: translateY(calc(var(--descentProgress, 0) * -26%));
+  will-change: transform;
+  filter: brightness(1.02) contrast(1.06) saturate(1.06);
+}
+
+.descent-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.04) 28%,
+      rgba(0, 0, 0, 0.04) 72%,
+      rgba(0, 0, 0, 0.22) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.16) 52%,
+      rgba(0, 0, 0, 0.36) 100%
+    );
+  pointer-events: none;
+}
+
+.descent-panel {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.descent-panel .panel-inner {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.descent-panel.is-active .panel-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* algemene tekst op trap, ZONDER box */
+.panel-infiltration {
+  top: 11vh;
+  left: 7vw;
+  width: min(620px, 44vw);
+}
+
+.panel-basement {
+  right: 7vw;
+  bottom: 10vh;
+  width: min(560px, 40vw);
+}
+
+.panel-infiltration h2,
+.panel-basement h2 {
+  margin: 0 0 28px;
+  max-width: 10ch;
+  font-size: clamp(3.4rem, 6.6vw, 7.2rem);
+  line-height: 0.9;
+  color: rgba(255, 248, 240, 0.98);
+  text-shadow:
+    0 10px 34px rgba(0, 0, 0, 0.52),
+    0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.panel-infiltration p,
+.panel-basement p {
+  max-width: 700px;
+  color: rgba(255, 246, 236, 0.92);
+  line-height: 1.9;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.48);
+}
+
+.panel-infiltration .label,
+.panel-basement .label,
+.panel-visual .label,
+.panel-illustration .label {
+  margin-bottom: 18px;
+  color: rgba(255, 240, 220, 0.8);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
+}
+
+.panel-infiltration .quote,
+.panel-basement .quote {
+  margin-top: 30px;
+  padding-left: 0;
+  border-left: none;
+  color: rgba(255, 232, 205, 0.96);
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.panel-infiltration .quote::before,
+.panel-basement .quote::before {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 1px;
+  margin-bottom: 18px;
+  background: rgba(255, 220, 180, 0.45);
+}
+
+/* beeldblokken op trap */
+.panel-park {
+  top: 10vh;
+  right: 7vw;
+  width: min(320px, 24vw);
+}
+
+.panel-kim {
+  top: 48vh;
+  left: 9vw;
+  width: min(340px, 25vw);
+}
+
+.panel-visual img {
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
+}
+
+.panel-copy h3 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: rgba(255, 248, 238, 0.97);
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.panel-copy p {
+  color: rgba(255, 246, 236, 0.9);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.42);
+}
+
+/* illustratie aan het einde van de afdaling */
+.panel-illustration {
+  left: 50%;
+  bottom: 8vh;
+  transform: translateX(-50%);
+  width: min(980px, 78vw);
+}
+
+.panel-illustration-inner img {
+  width: 100%;
+  display: block;
+  margin-bottom: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
+}
+
+.panel-copy-wide {
+  max-width: 760px;
+}
+
+.panel-copy-wide .quote {
+  margin-top: 26px;
+  color: rgba(255, 232, 190, 0.96);
+}
+
+/* kleine aansluiting na 4-blokken */
+.contrast-grid-scene {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* mobiel */
+@media (max-width: 1100px) {
+  .descent-scene {
+    min-height: 580vh;
+  }
+
+  .panel-infiltration,
+  .panel-basement,
+  .panel-park,
+  .panel-kim,
+  .panel-illustration {
+    width: auto;
+    left: 24px;
+    right: 24px;
+    transform: none;
+  }
+
+  .panel-infiltration {
+    top: 9vh;
+  }
+
+  .panel-park {
+    top: 36vh;
+  }
+
+  .panel-kim {
+    top: 62vh;
+  }
+
+  .panel-basement {
+    bottom: 18vh;
+  }
+
+  .panel-illustration {
+    bottom: 6vh;
+  }
+
+  .panel-infiltration h2,
+  .panel-basement h2 {
+    max-width: 12ch;
+    font-size: clamp(2.8rem, 10vw, 4.8rem);
+  }
+
+  .descent-stairs-image {
+    height: 155%;
+    transform: translateY(calc(var(--descentProgress, 0) * -20%));
+  }
+}
+
+
+
+/* =========================================================
+   READABILITY + CLEAN CINEMATIC DESIGN
+   plak onderaan style.css
+========================================================= */
+
+/* achtergrond iets rustiger maken */
+.intro-editorial-scene::before {
+  filter: brightness(0.48) contrast(1.08) saturate(0.92);
+}
+
+.intro-editorial-scene::after {
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.48) 48%,
+      rgba(0, 0, 0, 0.68) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.24),
+      rgba(0, 0, 0, 0.62)
+    );
+}
+
+/* alle tekstkaarten donkerder en cleaner */
+.intro-editorial-copy,
+.intro-editorial-rich,
+.intro-editorial-poor,
+.intro-editorial-note,
+.contrast-card,
+.inequality-image-text {
+  background: rgba(10, 8, 6, 0.72);
+  border: 1px solid rgba(255, 232, 190, 0.16);
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, 0.48),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* tekst veel leesbaarder */
+p {
+  color: rgba(255, 246, 232, 0.86);
+}
+
+.intro-editorial-copy p,
+.intro-editorial-rich p,
+.intro-editorial-poor p,
+.contrast-card p,
+.stair-text-panel p,
+.inequality-image-text p,
+.ending-content p,
+.final-scene p {
+  color: rgba(255, 246, 232, 0.88);
+  line-height: 1.85;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* titels scherper */
+h1,
+h2,
+h3 {
+  color: rgba(255, 248, 238, 0.98);
+  text-shadow: 0 8px 34px rgba(0, 0, 0, 0.42);
+}
+
+.label,
+.contrast-card-label,
+.intro-card-label {
+  color: rgba(255, 235, 205, 0.68);
+}
+
+/* kaart rechts iets rustiger */
+.intro-editorial-rich img,
+.intro-editorial-poor img,
+.contrast-card img {
+  filter: brightness(0.9) contrast(1.06) saturate(0.96);
+}
+
+/* meer ademruimte tussen blokken */
+.intro-editorial-frame {
+  gap: 34px;
+}
+
+.intro-editorial-copy {
+  padding: 56px;
+}
+
+.intro-editorial-rich,
+.intro-editorial-poor {
+  padding: 26px;
+}
+
+/* quote mooier */
+.quote {
+  color: rgba(255, 232, 190, 0.96);
+  border-left: 1px solid rgba(255, 210, 150, 0.38);
+  padding-left: 22px;
+}
+
+/* navigatie minder storend over het design */
+.chapter-nav {
+  right: 24px;
+  opacity: 0.72;
+}
+
+.chapter-nav:hover {
+  opacity: 1;
+}
+
+
+
+
+/* =========================================================
+   VIDEO INTERLUDE — VIDEO VISIBLE + TEXT BELOW
+========================================================= */
+
+.video-interlude-scene {
+  min-height: 120vh;
+  padding: 10vw;
+  display: grid;
+  align-content: center;
+  gap: 42px;
+
+  overflow: hidden;
+}
+
+.video-interlude-frame {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(242, 234, 219, 0.16);
+  background: #000;
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.62),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.parasite-edit-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 74vh;
+  object-fit: contain;
+  background: #000;
+
+  z-index: 10000;
+}
+
+.video-interlude-text {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-interlude-text .label {
+  margin-bottom: 18px;
+}
+
+.video-interlude-text h2 {
+  margin: 0 auto 24px;
+  color: #f2eadb;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 92px);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+.video-interlude-text p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  color: rgba(242, 234, 219, 0.76);
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  .video-interlude-scene {
+    min-height: 100vh;
+    padding: 22vw 22px;
+    gap: 30px;
+  }
+
+  .parasite-edit-video {
+    max-height: 58vh;
+  }
+
+  .video-interlude-text {
+    text-align: left;
+  }
+
+  .video-interlude-text h2 {
+    font-size: clamp(34px, 11vw, 62px);
+  }
+}
+/* =========================================================
+   DESCENT CLEAN FIX — links/rechts beeld + tekst
+   plak onderaan body.css
+========================================================= */
+
+/* iets meer scrollruimte zodat elk panel rustiger komt */
+.descent-scene {
+  min-height: 680vh;
+}
+
+/* panels netjes zichtbaar/weg */
+.descent-panel {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+}
+
+.descent-panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s ease, visibility 0s;
+}
+
+.descent-panel .panel-inner {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+}
+
+/* 04 stairs tekst links */
+.panel-infiltration {
+  top: 10vh;
+  left: 7vw;
+  width: min(620px, 42vw);
+}
+
+/* 04 villa beeld + tekst rechts */
+.panel-hidden-villa {
+  top: 11vh;
+  right: 7vw;
+  width: min(760px, 48vw);
+}
+
+.panel-hidden-villa .panel-inner {
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.panel-hidden-villa img {
+  width: 100%;
+  height: min(290px, 36vh);
+  object-fit: cover;
+  margin: 0;
+}
+
+/* 05 illustratie kleiner + tekst ernaast */
+.panel-illustration {
+  left: 7vw;
+  right: auto;
+  top: 12vh;
+  bottom: auto;
+  transform: none;
+  width: min(900px, 62vw);
+}
+
+.panel-illustration-inner {
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.panel-illustration-inner img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  margin: 0;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+}
+
+.panel-illustration .panel-copy {
+  max-width: 560px;
+}
+
+/* 06 basement beeld + tekst rechts/onderin */
+.panel-basement {
+  right: 7vw;
+  bottom: 9vh;
+  width: min(820px, 52vw);
+}
+
+.panel-basement-visual {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.panel-basement-visual img {
+  width: 100%;
+  height: min(320px, 38vh);
+  object-fit: cover;
+  margin: 0;
+}
+
+/* tekst iets compacter zodat het niet uit beeld valt */
+.panel-copy h3,
+.panel-illustration h3 {
+  font-size: clamp(2rem, 2.6vw, 3.2rem);
+  line-height: 0.95;
+}
+
+.panel-copy p,
+.panel-illustration p,
+.panel-infiltration p,
+.panel-basement p {
+  font-size: clamp(0.95rem, 1vw, 1.08rem);
+  line-height: 1.65;
+}
+
+.panel-infiltration h2,
+.panel-basement h2 {
+  font-size: clamp(3rem, 5.6vw, 6rem);
+}
+
+/* op mobiel alles onder elkaar */
+@media (max-width: 1100px) {
+  .descent-scene {
+    min-height: 780vh;
+  }
+
+  .panel-infiltration,
+  .panel-hidden-villa,
+  .panel-illustration,
+  .panel-basement {
+    left: 24px;
+    right: 24px;
+    width: auto;
+    transform: none;
+  }
+
+  .panel-infiltration,
+  .panel-hidden-villa,
+  .panel-illustration {
+    top: 8vh;
+    bottom: auto;
+  }
+
+  .panel-basement {
+    top: auto;
+    bottom: 8vh;
+  }
+
+  .panel-hidden-villa .panel-inner,
+  .panel-illustration-inner,
+  .panel-basement-visual {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .panel-hidden-villa img,
+  .panel-illustration-inner img,
+  .panel-basement-visual img {
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel-hidden-villa img,
+  .panel-illustration-inner img,
+  .panel-basement-visual img {
+    max-height: 210px;
+  }
+
+  .panel-copy p,
+  .panel-illustration p,
+  .panel-infiltration p,
+  .panel-basement p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+}
+

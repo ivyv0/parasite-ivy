@@ -1,0 +1,323 @@
+/* =========================================================
+   09 / THE END
+========================================================= */
+/* =========================================================
+   FONT SYSTEM
+========================================================= */
+
+:root {
+  --font-luxury: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-compact: "Archivo Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* gewone tekst */
+body,
+p,
+button,
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+/* grote luxe / filmische titels */
+h1,
+h2,
+h3,
+.hero-main-title,
+.title-parasite,
+.title-living,
+.video-interlude-text h2,
+.ending-content h2,
+.final-scene h2,
+.panel-copy h3,
+.panel-infiltration h2,
+.panel-basement h2 {
+  font-family: var(--font-luxury);
+  font-weight: 600;
+}
+
+/* quotes elegant */
+.quote {
+  font-family: var(--font-luxury);
+  font-weight: 500;
+}
+
+/* menu, labels, kleine tekst */
+.label,
+.scroll-hint,
+.chapter-nav,
+.chapter-nav-trigger,
+.chapter-nav-list a,
+.chapter-nav-list a span,
+.chapter-nav-list a em,
+.intro-card-label,
+.contrast-card-label,
+.intro-editorial-note span {
+  font-family: var(--font-compact);
+  font-weight: 600;
+}
+
+/* bodytekst rustiger */
+p {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* labels strak */
+.label,
+.scroll-hint,
+.chapter-nav-list a em {
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+/* grote titels iets luxe */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.07em;
+}
+.ending-scene {
+  z-index: 60;
+  min-height: 180vh;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.ending-image-panel {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+.ending-image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter:
+    brightness(calc(0.72 + var(--final) * 0.16))
+    contrast(1.04)
+    saturate(1.08);
+}
+
+.ending-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(to right, rgba(20, 5, 2, 0.54), rgba(60, 18, 8, 0.2), rgba(20, 5, 2, 0.5)),
+    linear-gradient(to bottom, rgba(255, 120, 50, 0.06), rgba(0, 0, 0, 0.38));
+}
+
+.ending-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  max-width: 820px;
+  padding: 9vh 7vw 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: var(--final);
+  transform: translateY(calc((1 - var(--final)) * 50px));
+}
+
+/* =========================================================
+   10 / SYSTEM
+========================================================= */
+
+.final-scene {
+  z-index: 65;
+  min-height: 100vh;
+  padding: 7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 210, 130, 0.08), transparent 30%),
+    linear-gradient(to bottom, #080504, #000);
+}
+
+.final-scene h2,
+.final-scene p {
+  max-width: 900px;
+  opacity: var(--final);
+  transform: translateY(calc((1 - var(--final)) * 40px));
+}
+
+/* =========================================================
+   CLEAN AESTHETIC CURSOR
+========================================================= */
+
+body {
+  cursor: none;
+}
+
+.water-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(255, 246, 230, 0.9);
+  border-radius: 50%;
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.18s ease,
+    height 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    opacity 0.18s ease;
+
+  background: rgba(255, 246, 230, 0.06);
+  backdrop-filter: blur(2px);
+  box-shadow:
+    0 0 18px rgba(255, 220, 170, 0.18),
+    inset 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.water-cursor.is-hover {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 246, 230, 0.1);
+  border-color: rgba(255, 226, 180, 0.95);
+}
+
+.water-cursor.is-hidden {
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  body {
+    cursor: auto;
+  }
+
+  .water-cursor {
+    display: none;
+  }
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .chapter-nav {
+    right: 18px;
+  }
+
+  .contrast-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .chapter-nav {
+    display: none;
+  }
+
+  .scene {
+    padding: 90px 24px;
+  }
+
+  .hero-title {
+    left: 24px;
+    right: 24px;
+    top: 20vh;
+  }
+
+  .hero-main-title {
+    font-size: clamp(4.2rem, 18vw, 7rem);
+  }
+
+  .hero-house {
+    width: 115vw;
+    bottom: 8vh;
+  }
+
+  .hero-quote {
+    left: 24px;
+    right: 24px;
+    top: 66vh;
+  }
+
+  .scroll-hint {
+    left: 24px;
+    top: 80vh;
+  }
+
+  .intro-editorial-scene,
+  .contrast-grid-scene,
+  .inequality-image-scene {
+    padding: 80px 24px;
+  }
+
+  .intro-editorial-frame {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "rich"
+      "poor"
+      "note";
+  }
+
+  .intro-editorial-copy,
+  .intro-editorial-rich,
+  .intro-editorial-poor,
+  .intro-editorial-note,
+  .contrast-card-body,
+  .inequality-image-text {
+    padding: 24px;
+  }
+
+  .intro-editorial-copy {
+    min-height: auto;
+  }
+
+  .intro-editorial-rich img,
+  .intro-editorial-poor img,
+  .contrast-card img {
+    height: auto;
+  }
+
+  .stair-journey-scene {
+    min-height: 300vh;
+  }
+
+  .stair-sticky-bg img {
+    height: 170vh;
+    transform: translateY(calc(var(--stairs) * -70vh));
+  }
+
+  .stair-journey-content {
+    padding: 0 24px;
+  }
+
+  .stair-text-panel {
+    left: 24px;
+    right: 24px;
+    max-width: none;
+    padding: 24px;
+  }
+
+  .infiltration-panel {
+    top: 70vh;
+  }
+
+  .basement-panel {
+    right: 24px;
+    bottom: 14vh;
+  }
+
+  .ending-content {
+    padding: 80px 24px;
+  }
+}
+

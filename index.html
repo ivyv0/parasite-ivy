@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parasite — Living Above. Surviving Below.</title>
+
+    <link rel="stylesheet" href="./landings.css" />
+    <link rel="stylesheet" href="./body.css" />
+    <link rel="stylesheet" href="./einde.css" />
+  </head>
+
+  <body>
+    <div class="progress-bar">
+      <span id="progressFill"></span>
+    </div>
+
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div class="water-cursor" id="waterCursor"></div>
+
+    <nav class="chapter-nav" aria-label="Chapter navigation">
+      <div class="chapter-nav-trigger">
+        <span>Menu</span>
+      </div>
+
+      <div class="chapter-nav-list">
+        <a href="#hero">
+          <span>01</span>
+          <em>Opening</em>
+        </a>
+
+        <a href="#interior">
+          <span>02</span>
+          <em>De Villa</em>
+        </a>
+
+        <a href="#park-view">
+          <span>03</span>
+          <em>Uitzicht</em>
+        </a>
+
+        <a href="#switch">
+          <span>04</span>
+          <em>De Trap</em>
+        </a>
+
+        <a href="#above-below">
+          <span>05</span>
+          <em>Boven / Beneden</em>
+        </a>
+
+        <a href="#basement">
+          <span>06</span>
+          <em>De Kelder</em>
+        </a>
+
+        <a href="#end">
+          <span>07</span>
+          <em>Het Einde</em>
+        </a>
+
+        <a href="#system">
+          <span>08</span>
+          <em>Het Systeem</em>
+        </a>
+      </div>
+    </nav>
+
+    <main class="site">
+      <!-- 01 HERO -->
+      <section id="hero" class="scene hero-scene">
+        <div class="hero-background">
+        <div class="hero-background">
+  <video
+    class="hero-bg-video"
+    src="./public/backgroundwithrain.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
+</div>
+
+        <div class="hero-title">
+          <h1 class="hero-main-title">
+            <span class="title-parasite">PARASITE</span>
+
+            <span class="title-living">
+              Living Above.
+              <br />
+              Surviving Below.
+            </span>
+          </h1>
+        </div>
+
+        <img
+          class="hero-house"
+          src="./public/parasitebackhouse.png"
+          alt="Modern huis uit Parasite"
+        />
+
+        <p class="hero-quote">
+          Parasite laat sociale ongelijkheid zien als een wereld van boven en beneden:
+          luxe voor de één, overleven voor de ander.
+        </p>
+
+        <p class="scroll-hint">Scroll naar beneden</p>
+
+        <div class="split-transition">
+          <div class="split-panel left"></div>
+          <div class="split-panel right"></div>
+        </div>
+      </section>
+
+      <!-- 02 THE VILLA -->
+      <section id="interior" class="scene intro-editorial-scene">
+        <div class="intro-editorial-frame">
+          <div class="intro-editorial-copy">
+            <p class="label">02 / De Villa</p>
+            <h2>Twee families. Twee werelden.</h2>
+
+            <p>
+              Boven staat de villa van de Park-familie. Een huis vol licht,
+              ruimte en rust. Alles voelt open, schoon en gecontroleerd. De tuin
+              ligt stil achter het grote raam. De stad lijkt ver weg. Hier voelt
+              rijkdom bijna vanzelfsprekend.
+            </p>
+
+            <p>
+              Maar ergens lager in dezelfde stad woont de Kim-familie. Hun huis is
+              klein, vol en half onder de grond. Hun raam kijkt niet uit op groen,
+              maar op de straat. Waar de Parks ruimte hebben om te ademen, leven de
+              Kims met druk, onzekerheid en schaamte.
+            </p>
+
+            <p>
+              In <em>Parasite</em> vertelt het huis meer dan de personages zelf.
+              Wie boven woont, leeft in licht. Wie beneden woont, moet vechten om
+              gezien te worden.
+            </p>
+
+            <p class="quote">
+              “Architecture shows who gets to live in the light.”
+            </p>
+          </div>
+
+          <div class="intro-editorial-rich">
+            <div class="intro-card-label">Above / The Park House</div>
+
+            <img
+              src="./public/rijkefam.png"
+              alt="Interieur van het huis van de rijke Park-familie"
+            />
+
+            <p>
+              De Park-familie leeft boven, in licht, openheid en comfort. Hun
+              villa voelt veilig en leeg op een luxe manier: alles is netjes,
+              ruim en onder controle.
+            </p>
+          </div>
+
+          <div class="intro-editorial-poor">
+            <div class="intro-card-label">Below / The Kim Space</div>
+
+            <img
+              src="./public/badkamer-arm.png"
+              alt="Krappe ruimte van de arme Kim-familie"
+            />
+
+            <p>
+              De Kim-familie leeft lager, in een ruimte die voller, donkerder en
+              kwetsbaarder voelt. Hun woning maakt armoede niet alleen zichtbaar,
+              maar ook voelbaar.
+            </p>
+          </div>
+
+          <div class="intro-editorial-note">
+            <span>Key idea</span>
+
+            <p>
+              Ongelijkheid gaat hier niet alleen over geld. Het gaat over ruimte,
+              licht, uitzicht en de vraag wie zichtbaar mag zijn.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 VIEWS OF CLASS -->
+      <section id="park-view" class="scene contrast-grid-scene">
+        <div class="contrast-grid-intro">
+          <p class="label">03 / Uitzicht</p>
+          <h2>Wat je ziet, hangt af van waar je woont.</h2>
+
+          <p>
+            De ramen in <em>Parasite</em> laten zien hoe klasse je blik op de wereld
+            bepaalt. De Parks kijken uit op een rustige tuin. De Kims kijken uit op
+            de straat, vuil en chaos. Beide families leven in dezelfde stad, maar hun
+            uitzicht is compleet anders.
+          </p>
+
+          <p>
+            Zo wordt sociale ongelijkheid niet alleen verteld, maar zichtbaar gemaakt
+            door beeld, ruimte en perspectief.
+          </p>
+        </div>
+
+        <div class="contrast-grid">
+          <article class="contrast-card park-card">
+            <img
+              src="./public/vila-raam.png"
+              alt="Uitzicht vanuit de villa van de Park-familie"
+            />
+
+            <div class="contrast-card-body">
+              <p class="contrast-card-label">Above / The Park View</p>
+              <h3>Light, garden and control.</h3>
+
+              <p>
+                Vanuit de villa voelt de wereld rustig en beheerst. Het raam kadert
+                een tuin die veilig, stil en beschermd lijkt.
+              </p>
+            </div>
+          </article>
+
+          <article class="contrast-card park-card">
+            <img src="./public/tuin.png" alt="De tuin van de Park-familie" />
+
+            <div class="contrast-card-body">
+              <p class="contrast-card-label">Above / The Garden</p>
+              <h3>Nature as privilege.</h3>
+
+              <p>
+                De tuin staat voor rust en afstand. Voor de Parks is natuur iets waar
+                ze naar kunnen kijken zonder de chaos van de stad te voelen.
+              </p>
+            </div>
+          </article>
+
+          <article class="contrast-card kim-card">
+            <img
+              src="./public/kim-fam.png"
+              alt="De Kim-familie in hun krappe woning"
+            />
+
+            <div class="contrast-card-body">
+              <p class="contrast-card-label">Below / The Kim Family</p>
+              <h3>Life under pressure.</h3>
+
+              <p>
+                Bij de Kims voelt alles dichter op elkaar. Hun huis laat zien hoe
+                armoede niet alleen over geld gaat, maar ook over spanning, schaamte
+                en overleven.
+              </p>
+            </div>
+          </article>
+
+          <article class="contrast-card kim-card">
+            <img
+              src="./public/kim-raam.png"
+              alt="Het lage raam van de Kim-familie"
+            />
+
+            <div class="contrast-card-body">
+              <p class="contrast-card-label">Below / The Kim Window</p>
+              <h3>Life below the street.</h3>
+
+              <p>
+                Het raam van de Kims kijkt niet uit op een tuin, maar op de straat.
+                Ze leven letterlijk lager en ervaren de stad vanuit een kwetsbare
+                positie.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- VIDEO INTERLUDE -->
+      <section id="trailer" class="scene video-interlude-scene">
+        <div class="video-interlude-frame">
+        <video
+  class="parasite-edit-video"
+  src="./public/parasite-edit.mp4"
+  muted
+  controls
+  playsinline
+  preload="metadata"
+></video>
+        </div>
+
+        <div class="video-interlude-text">
+          <p class="label">04 / De afdaling begint</p>
+
+          <h2>What looks perfect above, hides something below.</h2>
+
+          <p>
+            Vanaf hier begint de afdaling. De villa lijkt rustig en perfect, maar hoe
+            verder je kijkt, hoe meer zichtbaar wordt wat onder die mooie buitenkant
+            verborgen blijft.
+          </p>
+        </div>
+      </section>
+
+      <!-- 04 + 05 + 06 CONNECTED DESCENT -->
+      <section id="switch" class="scene descent-scene">
+        <div id="above-below" class="scroll-anchor above-below-anchor"></div>
+        <div id="basement" class="scroll-anchor basement-anchor"></div>
+
+        <div class="descent-sticky">
+          <img
+            class="descent-stairs-image"
+            src="./public/stairs1.png"
+            alt="Lange trap die afdaalt naar de kelder"
+          />
+
+          <div class="descent-overlay"></div>
+
+          <!-- 04 THE STAIRS -->
+          <article class="descent-panel panel-infiltration">
+            <div class="panel-inner">
+              <p class="label">04 / De trap</p>
+              <h2>Every scroll goes lower.</h2>
+
+              <p>
+                In <em>Parasite</em> betekent elke trap iets. Om bij de villa te komen,
+                moet je omhoog. De wegen stijgen, de trappen worden langer, de huizen
+                worden groter. Rijkdom ligt letterlijk hoger.
+              </p>
+
+              <p>
+                Maar zodra de illusie breekt, gaat alles naar beneden. Naar de
+                voorraadruimte. Naar de geheime trap. Naar de kelder. Hoe lager je komt,
+                hoe meer de villa haar perfecte buitenkant verliest.
+              </p>
+
+              <p>
+                In mijn website wordt scrollen daarom een afdaling. Je begint boven, bij
+                licht en luxe. Daarna zak je steeds verder naar beneden. Niet alleen door
+                de pagina, maar door het systeem achter de film.
+              </p>
+
+              <p class="quote">
+                “Every staircase reveals a social ladder.”
+              </p>
+            </div>
+          </article>
+
+          <!-- PERFECT VILLA / HIDDEN UNDERNEATH -->
+          <article class="descent-panel panel-hidden-villa">
+            <div class="panel-inner panel-visual">
+              <img
+                src="./public/binnenhuis.png"
+                alt="Perfect interieur van de villa"
+              />
+
+              <div class="panel-copy">
+                <p class="label">04 / Naar beneden</p>
+                <h3>Het perfecte huis verbergt een andere wereld</h3>
+
+                <p>
+                  Van binnen lijkt de villa perfect. Alles is rustig, ruim en mooi
+                  ingericht. De wereld van de Parks voelt alsof niets mis kan gaan.
+                </p>
+
+                <p>
+                  Maar juist onder die perfecte buitenkant zit iets verborgen. Het huis
+                  laat niet meteen zien wat eronder leeft. De luxe bovenwereld bestaat
+                  naast een donkere onderlaag die niemand wil zien.
+                </p>
+
+                <p class="quote">
+                  “What looks perfect above, hides something below.”
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 ABOVE AND BELOW -->
+          <article class="descent-panel panel-illustration">
+            <div class="panel-inner panel-illustration-inner">
+              <img
+                src="./public/above-below-ill.png"
+                alt="Illustratie over rijk en arm in Parasite"
+              />
+
+              <div class="panel-copy panel-copy-wide">
+                <p class="label">05 / Boven en beneden</p>
+<h3>Tussen luxe en overleven.</h3>
+
+                <p>
+                  Boven is er comfort. Beneden is er overleven. Dat contrast is de kern
+                  van <em>Parasite</em>.
+                </p>
+
+                <p>
+                  De Parks leven in een wereld van ruimte, zonlicht en controle. De Kims
+                  leven in een wereld van krapte, donkerte en onzekerheid. Ze wonen dicht
+                  bij elkaar, maar hun levens voelen alsof ze in verschillende werelden
+                  bestaan.
+                </p>
+
+                <p>
+                  De grens tussen boven en beneden is niet alleen een verdieping in een
+                  huis. Het is een sociale grens: tussen gezien worden en verdwijnen.
+                </p>
+
+                <p class="quote">
+                  “Above is comfort. Below is survival.”
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 BASEMENT -->
+          <article class="descent-panel panel-basement">
+            <div class="panel-inner panel-visual panel-basement-visual">
+              <img
+                src="./public/the-basement.png"
+                alt="De verborgen kelder onder de villa"
+              />
+
+              <div class="panel-copy">
+               <p class="label">06 / De Kelder</p>
+<h3>Onder het huis zit een andere wereld.</h3>
+
+                <p>
+                  Onder de villa zit nog een andere wereld. Een plek zonder uitzicht,
+                  zonder licht en zonder vrijheid. De kelder maakt zichtbaar wat normaal
+                  verborgen blijft.
+                </p>
+
+                <p>
+                  De villa lijkt perfect, maar onder die perfectie zit angst,
+                  afhankelijkheid en overleving. Wat boven mooi en rustig voelt, rust op
+                  iets donkers dat niemand wil zien.
+                </p>
+
+                <p>
+                  De kelder laat zien dat ongelijkheid meerdere lagen heeft. Er zijn
+                  mensen beneden, maar er zijn ook mensen die nog dieper verdwijnen. Niet
+                  iedereen krijgt dezelfde kans om omhoog te komen.
+                </p>
+
+                <p class="quote">
+                  “The basement hides what the system refuses to see.”
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 07 THE END -->
+      <section id="end" class="scene ending-scene">
+        <div class="ending-image-panel">
+          <img
+            src="./public/the-end.png"
+            alt="Het einde van Parasite en de uitbarsting van klassenspanning"
+          />
+        </div>
+
+        <div class="ending-overlay"></div>
+
+        <div class="ending-content">
+          <p class="label">07 / The End</p>
+          <h2>When the system breaks, violence comes.</h2>
+
+          <p>
+            Aan het einde barst alles los. De spanning die de hele film onder de
+            oppervlakte zat, komt ineens naar boven. Het feest van de rijke
+            familie verandert in chaos. Voor mij laat dat zien dat ongelijkheid
+            niet eindeloos stil blijft.
+          </p>
+
+          <p>
+            Een belangrijk moment is hoe Mr. Park reageert op geur. Die reactie
+            laat zien hoe diep de afstand tussen de families zit. Voor de Parks
+            is armoede iets wat vies, ongemakkelijk en ver weg voelt. Voor
+            Ki-taek wordt dat een moment van vernedering.
+          </p>
+
+          <p>
+            Ki-taek steekt Mr. Park neer en vlucht daarna niet echt naar
+            vrijheid. Hij verdwijnt opnieuw naar beneden, de kelder in. Dat maakt
+            het einde zo sterk: hij breekt even uit, maar het systeem verdwijnt
+            niet. Hij wordt weer onzichtbaar.
+          </p>
+
+          <p class="quote">“The system turns survival into violence.”</p>
+        </div>
+      </section>
+
+      <!-- 08 SYSTEM / THE END -->
+      <section id="system" class="scene final-scene">
+        <div class="final-inner">
+          <p class="label">08 / Het Systeem</p>
+
+          <h2>The system was never built for everyone to rise.</h2>
+
+          <p>
+            Aan het einde blijft de vraag hangen: wie is eigenlijk de parasite?
+          </p>
+
+          <p>
+            Zijn het de Kims, die zich vastklampen aan de rijke familie om te
+            overleven? Zijn het de Parks, die leven van het werk van mensen onder
+            hen? Of is het groter dan beide families?
+          </p>
+
+          <p>
+            <em>Parasite</em> laat zien dat het probleem niet bij één persoon begint.
+            Het zit in het systeem. Een systeem waarin sommige mensen ruimte, licht
+            en veiligheid krijgen, terwijl anderen lager leven, minder keuze hebben
+            en steeds opnieuw moeten vechten om zichtbaar te blijven.
+          </p>
+
+          <p>
+            De ramen, trappen, tuin, villa, kelder en het semi-basement vertellen
+            samen één verhaal. Het huis is niet alleen een plek. Het huis is de
+            samenleving in het klein.
+          </p>
+
+          <p class="quote">
+            “The house is not just a setting. It is the system.”
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
