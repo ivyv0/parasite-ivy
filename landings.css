@@ -484,7 +484,7 @@ body.past-hero .hero-scene::before {
 .hero-house {
   position: fixed;
   left: 50%;
-  bottom: 1vh;
+  bottom: 0.1vh;
   z-index: 8;
   width: 110vw;
   max-width: none;
